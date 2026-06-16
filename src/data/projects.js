@@ -1,6 +1,12 @@
 import travelOverview from "../assets/travel-overview.png";
 import travelSystemOne from "../assets/travel-system-1.png";
 import travelSystemTwo from "../assets/travel-system-2.png";
+import onlineSalesMap from "../assets/online-sales-map.png";
+import onlineSalesBar from "../assets/online-sales-bar.png";
+import onlineSalesPie from "../assets/online-sales-pie.png";
+import onlineSalesInfo from "../assets/online-sales-info.png";
+import spotifyHome from "../assets/spotify-home.png";
+import spotifyStats from "../assets/spotify-stats.png";
 
 export const projectFilters = [
   "All",
@@ -68,36 +74,38 @@ const projects = [
   {
     name: "Online Sales Data Visualization",
     category: "Data Visualization",
-    featured: false,
+    featured: true,
+    images: [onlineSalesMap, onlineSalesBar, onlineSalesPie, onlineSalesInfo],
     shortDescription:
-      "An interactive global sales visualization with a world map, product race chart, and payment method breakdown.",
-    tech: ["JavaScript", "HTML/CSS", "GeoJSON", "CSV", "Data Visualization"],
+      "An interactive sales visualization that lets users explore country-level spending, product trends, and payment method behavior through maps and charts.",
+    tech: ["JavaScript", "HTML/CSS", "Leaflet", "GeoJSON", "CSV", "Data Visualization"],
     github: "https://github.com/jherrera3131/Online-Data-Sales",
     liveDemo: "",
     visualLabel: "Interactive Sales Map",
     mainProblem:
-      "Global sales data is hard to compare when geography, products, and payment methods are only shown in static tables.",
+      "Global sales data is difficult to understand when country spending, top products, and payment methods are hidden inside static rows of data.",
     whatIBuilt:
-      "Created an interactive map, bar graph race, pie chart, country-specific views, and insight popups.",
+      "Built an interactive map with country-level spending, hover insights, a product bar graph race, a payment-method pie chart, and an info modal explaining the visualization.",
     result:
-      "Built a more visual way to explore sales patterns across countries, products, and payment behavior.",
+      "Created a more exploratory interface for comparing sales patterns by geography, product demand, and payment behavior.",
   },
   {
     name: "Spotify Desktop Application",
     category: "Web App",
     featured: false,
+    images: [spotifyHome, spotifyStats],
     shortDescription:
-      "A Spotify-based app that displays music insights, top songs, genre breakdowns, and playlist features.",
-    tech: ["Python", "Flask", "Spotify API", "HTML/CSS", "JavaScript"],
+      "A Spotify-powered music dashboard that combines current playback, personalized playlists, weather-based recommendations, and listening analytics.",
+    tech: ["Python", "Flask", "Spotify API", "HTML/CSS", "JavaScript", "Data Visualization"],
     github: "https://github.com/mrenwicka/COM-306-Spotify-Project",
     liveDemo: "",
     visualLabel: "Music Insights",
     mainProblem:
-      "Spotify users generate personal listening data, but that data is not always presented as a customized analytics experience.",
+      "Spotify users have rich listening data, but it is not always presented as a personalized dashboard that connects music habits, stats, and contextual recommendations.",
     whatIBuilt:
-      "Built features for top songs, current song information, genre pie charts, monthly playlists, and weather-based playlist ideas.",
+      "Built a Flask app using Spotify data to display current playback, top songs, playlist recommendations, monthly playlists, and genre/artist breakdowns.",
     result:
-      "Created a personalized music dashboard experience using API data and user listening behavior.",
+      "Created a more personalized music experience that turns listening behavior into visual insights and recommendation features.",
   },
   {
     name: "ToDoApp",
