@@ -113,7 +113,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal className="float-slow">
-          <div className="card-glow rounded-[2rem] border border-[#f4efe7]/10 bg-[#10131c]/80 p-5">
+          <div className="card-glow soft-pulse rounded-[2rem] border border-[#f4efe7]/10 bg-[#10131c]/80 p-5">
             <div className="rounded-[1.5rem] border border-[#f4efe7]/10 bg-[#080a0f] p-5">
               <div className="mb-5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -158,9 +158,7 @@ export default function Hero() {
                   </p>
 
                   <p className="text-sm leading-6 text-[#a9a092]">
-                    Building a portfolio around dashboards, decision-support
-                    tools, data visualization, and product experiences that make
-                    complex systems easier to understand.
+                  Currently seeking full-time roles where I can apply software, data visualization, and product thinking to build dashboards, analytics tools, and decision-support experiences that make complex systems easier to understand.
                   </p>
                 </div>
               </div>
