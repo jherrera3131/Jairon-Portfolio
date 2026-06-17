@@ -7,6 +7,14 @@ import onlineSalesPie from "../assets/online-sales-pie.png";
 import onlineSalesInfo from "../assets/online-sales-info.png";
 import spotifyHome from "../assets/spotify-home.png";
 import spotifyStats from "../assets/spotify-stats.png";
+import redditPosts from "../assets/reddit-posts.png";
+import redditNetworkBuild from "../assets/reddit-network-build.png";
+import redditGraphStructure from "../assets/reddit-graph-structure.png";
+import redditUserSubreddits from "../assets/reddit-user-subreddits.png";
+import redditResults from "../assets/reddit-results.png";
+import todoSignup from "../assets/todo-signup.png";
+import todoDashboard from "../assets/todo-dashboard.png";
+import todoList from "../assets/todo-list.png";
 
 export const projectFilters = [
   "All",
@@ -41,35 +49,43 @@ const projects = [
     name: "Retail Inventory & KPI Analytics System",
     category: "Dashboard",
     featured: true,
+    visualType: "inventory-kpi",
     shortDescription:
-      "A database-backed analytics system for monitoring inventory health, sales trends, and reorder risks.",
+      "A database-backed analytics system for monitoring inventory health, sales trends, reorder thresholds, and operational risk.",
     tech: ["Python", "SQL", "MySQL", "KPI Reporting", "Database Design"],
     github: "https://github.com/jherrera3131/Database-Final",
     liveDemo: "",
     visualLabel: "Inventory Monitoring",
     mainProblem:
-      "Retail data across customers, orders, warehouses, and inventory can be difficult to turn into clear operational decisions.",
+      "Retail teams need to understand product demand, stock movement, reorder risk, and warehouse performance without manually digging through disconnected tables.",
     whatIBuilt:
-      "Designed normalized relational schemas, wrote analytical SQL queries, and automated KPI reporting with Python.",
+      "Designed normalized schemas for customers, products, orders, warehouses, and inventory workflows, then wrote analytical SQL queries and Python reporting workflows to surface KPIs.",
     result:
-      "Created a clearer workflow for surfacing inventory risks, bottlenecks, reorder thresholds, and product performance trends.",
+      "Created a decision-support workflow for identifying inventory risks, operational bottlenecks, reorder thresholds, and product performance trends.",
   },
   {
     name: "Sparse Interaction Graphs for Trend Monitoring",
     category: "Research",
     featured: true,
+    images: [
+      redditPosts,
+      redditNetworkBuild,
+      redditGraphStructure,
+      redditResults,
+      redditUserSubreddits,
+    ],
     shortDescription:
-      "A network analysis project that transformed Reddit interaction data into structured graphs for behavioral trend analysis.",
-    tech: ["Python", "SQL", "NetworkX", "Data Pipelines", "Network Analysis"],
+      "A network analysis platform that turns Reddit community activity into user-interaction graphs, bridge-like ties, and behavioral overlap metrics.",
+    tech: ["Python", "Flask", "SQL", "NetworkX", "Data Pipelines", "Network Analysis"],
     github: "",
     liveDemo: "",
     visualLabel: "Network Analysis",
     mainProblem:
-      "Large online communities create messy interaction data that is hard to understand from raw comments alone.",
+      "Raw Reddit activity is difficult to interpret because posts, comments, users, and subreddit overlap are spread across messy interaction data.",
     whatIBuilt:
-      "Built ingestion pipelines to convert Reddit comment datasets into structured interaction networks and applied similarity metrics.",
+      "Built a Flask-based tool to load recent posts, construct user-user interaction networks, analyze graph structure, identify bridge-like edges, and inspect user-to-subreddit portfolios.",
     result:
-      "Improved visibility into behavioral overlap, influence hubs, bridge-like relationships, and online interaction trends.",
+      "Surfaced network scale, cluster structure, bridge-like ties, central users, and overlap patterns that make online community behavior easier to study.",
   },
   {
     name: "Online Sales Data Visualization",
@@ -111,18 +127,19 @@ const projects = [
     name: "ToDoApp",
     category: "Web App",
     featured: false,
+    images: [todoDashboard, todoList, todoSignup],
     shortDescription:
-      "A Ruby on Rails task management app for creating, organizing, and managing personal to-do items.",
+      "A Ruby on Rails task management app designed around notebook-style task organization, categories, profiles, and completion workflows.",
     tech: ["Ruby", "Ruby on Rails", "HTML/CSS", "MVC", "Render"],
     github: "https://github.com/jherrera3131/ToDoApp",
     liveDemo: "",
     visualLabel: "Rails Web App",
     mainProblem:
-      "Users need a simple way to create, track, and manage personal tasks through a clean web interface.",
+      "Users need a simple way to create, categorize, update, complete, and review tasks without the interface feeling like a plain CRUD table.",
     whatIBuilt:
-      "Built a Rails application using MVC structure, database-backed models, views, routes, and deployment configuration.",
+      "Built a Rails app with user accounts, profile views, categories, task creation, task completion, navigation states, and deployment configuration.",
     result:
-      "Practiced full-stack web development, Rails conventions, and app deployment workflows.",
+      "Practiced full-stack Rails development while creating a more styled and personalized task management experience.",
   },
 ];
 
