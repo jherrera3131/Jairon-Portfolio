@@ -31,6 +31,7 @@ const projects = [
     category: "Research",
     featured: true,
     caseStudy: true,
+    caseStudyId: "travel-case-study",
     images: [travelOverview, travelSystemOne, travelSystemTwo],
     shortDescription:
       "A Flask-based research platform comparing LLM-assisted and constraint-based travel recommendation systems.",
@@ -49,6 +50,8 @@ const projects = [
     name: "Retail Inventory & KPI Analytics System",
     category: "Dashboard",
     featured: true,
+    caseStudy: true,
+    caseStudyId: "inventory-case-study",
     visualType: "inventory-kpi",
     shortDescription:
       "A database-backed analytics system for monitoring inventory health, sales trends, reorder thresholds, and operational risk.",
@@ -67,6 +70,8 @@ const projects = [
     name: "Sparse Interaction Graphs for Trend Monitoring",
     category: "Research",
     featured: true,
+    caseStudy: true,
+    caseStudyId: "reddit-case-study",
     images: [
       redditPosts,
       redditNetworkBuild,

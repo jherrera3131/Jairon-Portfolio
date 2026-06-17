@@ -51,7 +51,7 @@ export default function ProjectCard({ project }) {
         <div className="mt-6 flex flex-wrap gap-3">
           {project.caseStudy && (
             <a
-              href="#travel-case-study"
+            href={`#${project.caseStudyId || "case-studies"}`}
               className="inline-flex items-center gap-2 rounded-full bg-[#f2b56b] px-4 py-2 text-sm font-bold text-[#080a0f] transition hover:-translate-y-0.5 hover:bg-[#ffd08f]"
             >
               View Case Study

@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import TravelCaseStudy from "./components/TravelCaseStudy";
+import CaseStudies from "./components/CaseStudies";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -27,9 +27,7 @@ export default function App() {
         <Projects />
       </Reveal>
 
-      <Reveal>
-        <TravelCaseStudy />
-      </Reveal>
+      <CaseStudies />
 
       <Reveal>
         <Experience />
