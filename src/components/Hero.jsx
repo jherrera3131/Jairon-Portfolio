@@ -148,7 +148,7 @@ export default function Hero() {
 
                 <div className="space-y-3">
                   <Metric label="Projects documented" value="6" />
-                  <Metric label="Core theme" value="Complexity → clarity" />
+                  <Metric label="Core theme" value="Complexity → Clarity" />
                   <Metric label="Process" value="Research / Build / Evaluate" />
                 </div>
 
@@ -166,7 +166,7 @@ export default function Hero() {
               <div className="mt-5 grid grid-cols-3 gap-3">
                 <MiniCard icon="SQL" label="Data" />
                 <MiniCard icon="UX" label="Users" />
-                <MiniCard icon="VIZ" label="Visuals" />
+                <MiniCard icon="PY" label="Logic" />
               </div>
             </div>
           </div>
