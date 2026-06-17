@@ -47,10 +47,9 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-[#f2b56b] px-6 py-3 text-sm font-bold text-[#080a0f] transition hover:-translate-y-0.5 hover:bg-[#ffd08f]"
-              >
+                className="magnetic-button group inline-flex items-center gap-2 rounded-full bg-[#f2b56b] px-6 py-3 text-sm font-bold text-[#080a0f] transition hover:-translate-y-0.5 hover:bg-[#ffd08f]"              >
                 View case studies
-                <span>↗</span>
+                <span className="arrow-nudge">↗</span>
               </a>
 
               <a

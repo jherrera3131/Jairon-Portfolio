@@ -35,7 +35,7 @@ const caseStudies = [
     results: [
       { label: "Benchmark scenarios", value: "18" },
       { label: "Logged sessions", value: "38" },
-      { label: "Survey responses", value: "29" },
+      { label: "Survey responses", value: "39" },
       { label: "System 1 benchmark net flow", value: "+0.865" },
     ],
     findings: [
