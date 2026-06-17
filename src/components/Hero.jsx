@@ -148,7 +148,7 @@ export default function Hero() {
 
                 <div className="space-y-3">
                   <Metric label="Projects documented" value="6" />
-                  <Metric label="Core theme" value="Complexity → Clarity" />
+                  <Metric label="Core theme" value="Complexity into Clarity" />
                   <Metric label="Process" value="Research / Build / Evaluate" />
                 </div>
 
