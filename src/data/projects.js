@@ -32,7 +32,7 @@ const projects = [
         category: "Dashboard",
         status: "Currently Building",
         featured: true,
-        caseStudy: true,
+        caseStudy: false,
         caseStudyId: "mainstreet-risklens-case-study",
         visualType: "risklens",
         shortDescription:
