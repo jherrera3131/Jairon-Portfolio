@@ -3,6 +3,15 @@ import projects, { projectFilters } from "../data/projects";
 import SectionHeader from "./SectionHeader";
 import ProjectCard from "./ProjectCard";
 
+const filterLabels = {
+  All: "All",
+  Featured: "Highlights",
+  "Data Visualization": "Visual Analysis",
+  Dashboard: "Analytics Tools",
+  Research: "Research Systems",
+  "Web App": "Web & Software",
+};
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -17,8 +26,8 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Projects"
-          title="Selected work"
-          description="Projects focused on dashboards, data visualization, recommendation systems, research platforms, and web applications."
+          title="Applied projects"
+          description="Projects across software, data analysis, visualization, research systems, and web applications — built to make complex information easier to explore, evaluate, and use."
         />
 
         <div className="mb-8 flex flex-wrap gap-3">
@@ -32,7 +41,7 @@ export default function Projects() {
                   : "border border-[#f4efe7]/10 bg-[#10131c]/70 text-[#a9a092] hover:border-[#f2b56b]/50 hover:text-[#f4efe7]"
               }`}
             >
-              {filter}
+              {filterLabels[filter]}
             </button>
           ))}
         </div>
