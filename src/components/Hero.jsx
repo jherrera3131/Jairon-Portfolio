@@ -143,9 +143,7 @@ export default function Hero() {
 
                 <div className="space-y-3">
                   <Metric label="Projects documented" value="6" />
-                  <Metric label="Core theme" value="Complexity into Clarity" />
-                  <Metric label="Process" value="Research / Build / Evaluate" />
-                </div>
+                  <Metric label="Core theme" value="Complexity into Clarity" />                </div>
 
                 <div className="mt-5 rounded-2xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-4">
                   <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-[#f2b56b]">
