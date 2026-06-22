@@ -17,15 +17,46 @@ import todoDashboard from "../assets/todo-dashboard.png";
 import todoList from "../assets/todo-list.png";
 
 export const projectFilters = [
-  "All",
-  "Featured",
-  "Data Visualization",
-  "Dashboard",
-  "Research",
-  "Web App",
-];
+    "All",
+    "Featured",
+    "Currently Building",
+    "Data Visualization",
+    "Dashboard",
+    "Research",
+    "Web App",
+  ];
 
 const projects = [
+    {
+        name: "MainStreet RiskLens",
+        category: "Dashboard",
+        status: "Currently Building",
+        featured: true,
+        caseStudy: true,
+        caseStudyId: "mainstreet-risklens-case-study",
+        visualType: "risklens",
+        shortDescription:
+          "An in-progress full-stack SBA credit risk platform for predicting 36-month charge-off risk, calibrating probability of default, explaining loan-level drivers, auditing fairness risk, and stress-testing expected loss.",
+        tech: [
+          "Python",
+          "scikit-learn",
+          "FastAPI",
+          "React",
+          "SHAP",
+          "SQL",
+          "FRED API",
+          "LLM Pipeline",
+        ],
+        github: "",
+        liveDemo: "",
+        visualLabel: "Credit Risk Platform",
+        mainProblem:
+          "Small-business lenders need more than a risk score. They need calibrated probabilities, transparent expected-loss views, model validation, adverse-action reason codes, and fairness/proxy-risk checks that make credit decisions easier to review.",
+        whatIBuilt:
+          "Currently building a full-stack platform using SBA small-business loan data, time-based train/test splits, class-weighted baseline models, probability calibration, SHAP explanations, exposure toggles, fairness diagnostics, and macro stress-testing workflows.",
+        result:
+          "The goal is to create a portfolio-ready credit risk command center that connects machine learning, explainability, regulatory-aware adverse-action drafting, and financial risk analysis in one interactive dashboard.",
+      },
   {
     name: "Travel Recommendation Research Platform",
     category: "Research",

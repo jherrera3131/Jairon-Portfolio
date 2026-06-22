@@ -20,11 +20,19 @@ export default function ProjectCard({ project }) {
         <div className="mb-3 flex items-start justify-between gap-4">
           <h3 className="text-2xl font-bold text-[#f4efe7]">{project.name}</h3>
 
-          {project.featured && (
-            <span className="rounded-full border border-[#f2b56b]/20 bg-[#f2b56b]/10 px-3 py-1 text-xs font-semibold text-[#f2b56b]">
-              Featured
-            </span>
-          )}
+          <div className="flex shrink-0 flex-wrap justify-end gap-2">
+  {project.status && (
+    <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+      {project.status}
+    </span>
+  )}
+
+  {project.featured && (
+    <span className="rounded-full border border-[#f2b56b]/20 bg-[#f2b56b]/10 px-3 py-1 text-xs font-semibold text-[#f2b56b]">
+      Featured
+    </span>
+  )}
+</div>
         </div>
 
         <p className="mb-5 leading-7 text-[#a9a092]">

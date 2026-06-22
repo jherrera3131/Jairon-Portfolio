@@ -4,13 +4,14 @@ import SectionHeader from "./SectionHeader";
 import ProjectCard from "./ProjectCard";
 
 const filterLabels = {
-  All: "All",
-  Featured: "Highlights",
-  "Data Visualization": "Visual Analysis",
-  Dashboard: "Analytics Tools",
-  Research: "Research Systems",
-  "Web App": "Web & Software",
-};
+    All: "All",
+    Featured: "Highlights",
+    "Currently Building": "Currently Building",
+    "Data Visualization": "Visual Analysis",
+    Dashboard: "Analytics Tools",
+    Research: "Research Systems",
+    "Web App": "Web & Software",
+  };
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -18,6 +19,9 @@ export default function Projects() {
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true;
     if (activeFilter === "Featured") return project.featured;
+    if (activeFilter === "Currently Building") {
+      return project.status === "Currently Building";
+    }
     return project.category === activeFilter;
   });
 

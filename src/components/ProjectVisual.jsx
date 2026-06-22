@@ -1,3 +1,117 @@
+function RiskLensVisual() {
+  return (
+    <div className="relative h-60 overflow-hidden bg-[#080a0f] p-5">
+      <div className="absolute inset-0 grid-bg opacity-50" />
+
+      <div className="relative h-full rounded-2xl border border-[#f4efe7]/10 bg-[#10131c] p-4 shadow-2xl">
+        <div className="mb-4 flex items-center justify-between">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#f2b56b]">
+              MainStreet RiskLens
+            </p>
+            <p className="mt-1 text-xs text-[#a9a092]">
+              PD calibration, SHAP explanations, fairness, and stress testing
+            </p>
+          </div>
+
+          <span className="rounded-full border border-[#71d6c9]/30 bg-[#71d6c9]/10 px-3 py-1 text-xs font-semibold text-[#71d6c9]">
+            Building
+          </span>
+        </div>
+
+        <div className="grid grid-cols-3 gap-3">
+          <div className="rounded-xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-3">
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[#a9a092]">
+              Charge-Off PD
+            </p>
+            <p className="mt-2 text-2xl font-black text-[#f2b56b]">8.4%</p>
+            <div className="mt-3 h-2 rounded-full bg-[#f4efe7]/10">
+              <div className="h-2 w-[58%] rounded-full bg-[#f2b56b]" />
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-3">
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[#a9a092]">
+              PR-AUC
+            </p>
+            <p className="mt-2 text-2xl font-black text-[#71d6c9]">0.42</p>
+            <div className="mt-3 h-2 rounded-full bg-[#f4efe7]/10">
+              <div className="h-2 w-[72%] rounded-full bg-[#71d6c9]" />
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-3">
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[#a9a092]">
+              Expected Loss
+            </p>
+            <p className="mt-2 text-2xl font-black text-[#f4efe7]">$18K</p>
+            <div className="mt-3 h-2 rounded-full bg-[#f4efe7]/10">
+              <div className="h-2 w-[46%] rounded-full bg-[#f4efe7]/50" />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 grid grid-cols-[1.1fr_0.9fr] gap-3">
+          <div className="rounded-xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-3">
+            <div className="mb-3 flex items-center justify-between">
+              <p className="text-xs font-semibold text-[#f4efe7]">
+                Risk drivers
+              </p>
+              <p className="font-mono text-[10px] text-[#a9a092]">SHAP</p>
+            </div>
+
+            <div className="space-y-2">
+              {[
+                ["Industry risk", 76],
+                ["Loan size", 58],
+                ["Term length", 44],
+              ].map(([label, width]) => (
+                <div key={label}>
+                  <div className="mb-1 flex items-center justify-between">
+                    <span className="text-[10px] text-[#a9a092]">{label}</span>
+                    <span className="text-[10px] text-[#f2b56b]">
+                      {width}%
+                    </span>
+                  </div>
+                  <div className="h-1.5 rounded-full bg-[#f4efe7]/10">
+                    <div
+                      className="h-1.5 rounded-full bg-[#f2b56b]/80"
+                      style={{ width: `${width}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-[#f4efe7]/10 bg-[#080a0f]/70 p-3">
+            <p className="mb-3 text-xs font-semibold text-[#f4efe7]">
+              Validation
+            </p>
+
+            <div className="space-y-2">
+              <div className="flex items-center justify-between rounded-lg bg-[#71d6c9]/10 px-2 py-1">
+                <span className="text-[11px] text-[#a9a092]">Calibrated PD</span>
+                <span className="text-[11px] font-bold text-[#71d6c9]">On</span>
+              </div>
+
+              <div className="flex items-center justify-between rounded-lg bg-[#f2b56b]/10 px-2 py-1">
+                <span className="text-[11px] text-[#a9a092]">Fairness audit</span>
+                <span className="text-[11px] font-bold text-[#f2b56b]">Queued</span>
+              </div>
+
+              <div className="flex items-center justify-between rounded-lg bg-[#f4efe7]/5 px-2 py-1">
+                <span className="text-[11px] text-[#a9a092]">Macro stress</span>
+                <span className="text-[11px] font-bold text-[#f4efe7]">FRED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function InventoryKpiVisual() {
   return (
     <div className="relative h-60 overflow-hidden bg-[#080a0f] p-5">
@@ -95,6 +209,14 @@ function InventoryKpiVisual() {
 }
 
 export default function ProjectVisual({ project }) {
+  if (project.visualType === "risklens") {
+    return (
+      <div className="project-visual relative overflow-hidden border-b border-[#f4efe7]/10 bg-[#080a0f]">
+        <RiskLensVisual />
+      </div>
+    );
+  }
+
   if (project.visualType === "inventory-kpi") {
     return (
       <div className="project-visual relative overflow-hidden border-b border-[#f4efe7]/10 bg-[#080a0f]">
