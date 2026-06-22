@@ -32,16 +32,11 @@ export default function Hero() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[#f4efe7] md:text-7xl">
-              Designing tools for the part of the problem where things are still
-              messy.
+            Using software and data to bring clarity to complex systems
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#a9a092]">
-              I’m Jairon Herrera, a Computer Science & Economics graduate from
-              Connecticut College based in Stamford, CT. I build software,
-              analytics tools, dashboards, research platforms, and data
-              visualizations that help people understand what is happening inside
-              complex systems.
+            I’m Jairon Herrera, a Computer Science & Economics graduate from Connecticut College based in Stamford, CT. I'm interested in using software, data, and analytical problem-solving to make  complex systems easier to understand, evaluate, and act on.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -158,15 +153,8 @@ export default function Hero() {
                   </p>
 
                   <p className="text-sm leading-6 text-[#a9a092]">
-                  Currently seeking full-time roles where I can apply software, data visualization, and product thinking to build dashboards, analytics tools, and decision-support experiences that make complex systems easier to understand.
-                  </p>
+                  Currently seeking full-time opportunities where I can apply software, data, and analytical thinking to turn complex information into clearer systems, stronger insights, and more useful decision-making.                  </p>
                 </div>
-              </div>
-
-              <div className="mt-5 grid grid-cols-3 gap-3">
-                <MiniCard icon="SQL" label="Data" />
-                <MiniCard icon="UX" label="Users" />
-                <MiniCard icon="PY" label="Logic" />
               </div>
             </div>
           </div>

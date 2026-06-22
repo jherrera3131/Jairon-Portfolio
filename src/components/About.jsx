@@ -13,24 +13,11 @@ export default function About() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-[#f4efe7]/10 bg-[#10131c]/70 p-6 md:col-span-2">
             <p className="leading-8 text-[#a9a092]">
-              My work is built around a focused mix of software, data, and
-              product thinking. I build web apps, databases, Python workflows,
-              Rails projects, Flask systems, SQL-backed tools, dashboards,
-              interfaces, and visual systems that help people understand
-              complicated information faster. Whether I am writing code,
-              analyzing data, or designing an interface, the goal is the same:
-              make the system easier to read, trust, and act on.
+            My work is built around a focused mix of software, data, and analytical problem-solving. I’ve worked across web applications, databases, Python workflows, Rails projects, Flask systems, SQL-backed tools, dashboards, and interactive visualizations, with the same goal across each project: make complicated information easier to understand, trust, and act on.
             </p>
 
             <p className="mt-5 leading-8 text-[#a9a092]">
-              At Connecticut College, I studied Computer Science and Economics
-              because I was interested in both sides of a problem: how systems
-              work, and how people make decisions inside them. My projects have
-              covered recommendation systems, online community networks, KPI
-              dashboards, SQL databases, retail inventory analytics, and
-              interactive visualizations built with JavaScript, HTML, CSS, D3.js,
-              Python, Flask, Rails, and SQL. What makes my work different is that
-              I do not separate the technical problem from the human one.
+            At Connecticut College, I studied Computer Science and Economics because I was interested in both sides of a problem: how systems work, and how people make decisions inside them. My projects have covered recommendation systems, online community networks, KPI dashboards, SQL databases, retail inventory analytics, and interactive visualizations built with JavaScript, HTML, CSS, D3.js, Python, Flask, Rails, and SQL. What connects them is not one specific job title or field, but the way I approach problems: breaking down complexity, finding patterns, and building clearer ways to work with information.
             </p>
           </div>
 
