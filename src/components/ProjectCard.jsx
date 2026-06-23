@@ -18,21 +18,23 @@ export default function ProjectCard({ project }) {
 
       <div className="p-6">
         <div className="mb-3 flex items-start justify-between gap-4">
-          <h3 className="text-2xl font-bold text-[#f4efe7]">{project.name}</h3>
+          <h3 className="text-2xl font-bold text-[#f4efe7]">
+            {project.name}
+          </h3>
 
           <div className="flex shrink-0 flex-wrap justify-end gap-2">
-  {project.status && (
-    <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
-      {project.status}
-    </span>
-  )}
+            {project.status && (
+              <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+                {project.status}
+              </span>
+            )}
 
-  {project.featured && (
-    <span className="rounded-full border border-[#f2b56b]/20 bg-[#f2b56b]/10 px-3 py-1 text-xs font-semibold text-[#f2b56b]">
-      Featured
-    </span>
-  )}
-</div>
+            {project.featured && (
+              <span className="rounded-full border border-[#f2b56b]/20 bg-[#f2b56b]/10 px-3 py-1 text-xs font-semibold text-[#f2b56b]">
+                Featured
+              </span>
+            )}
+          </div>
         </div>
 
         <p className="mb-5 leading-7 text-[#a9a092]">
@@ -59,7 +61,7 @@ export default function ProjectCard({ project }) {
         <div className="mt-6 flex flex-wrap gap-3">
           {project.caseStudy && (
             <a
-            href={`#${project.caseStudyId || "case-studies"}`}
+              href={`#${project.caseStudyId || "case-studies"}`}
               className="inline-flex items-center gap-2 rounded-full bg-[#f2b56b] px-4 py-2 text-sm font-bold text-[#080a0f] transition hover:-translate-y-0.5 hover:bg-[#ffd08f]"
             >
               View Case Study
@@ -67,21 +69,34 @@ export default function ProjectCard({ project }) {
             </a>
           )}
 
-          {project.github ? (
+          {"github" in project &&
+            (project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[#f4efe7]/10 px-4 py-2 text-sm text-[#f4efe7] transition hover:-translate-y-0.5 hover:border-[#f2b56b]/60 hover:bg-[#f2b56b]/10"
+              >
+                <span>{`</>`}</span>
+                Code
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#f4efe7]/10 px-4 py-2 text-sm text-[#a9a092]/60">
+                <span>{`</>`}</span>
+                Code coming soon
+              </span>
+            ))}
+
+          {project.paper && (
             <a
-              href={project.github}
+              href={project.paper}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[#f4efe7]/10 px-4 py-2 text-sm text-[#f4efe7] transition hover:-translate-y-0.5 hover:border-[#f2b56b]/60 hover:bg-[#f2b56b]/10"
             >
-              <span>{`</>`}</span>
-              Code
+              <span>PDF</span>
+              Read Paper
             </a>
-          ) : (
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#f4efe7]/10 px-4 py-2 text-sm text-[#a9a092]/60">
-              <span>{`</>`}</span>
-              Code coming soon
-            </span>
           )}
 
           {project.liveDemo && (

@@ -15,6 +15,7 @@ import redditResults from "../assets/reddit-results.png";
 import todoSignup from "../assets/todo-signup.png";
 import todoDashboard from "../assets/todo-dashboard.png";
 import todoList from "../assets/todo-list.png";
+import wageGapPaper from "../assets/wage-gap-ols-nlsy79.pdf";
 
 export const projectFilters = [
     "All",
@@ -113,7 +114,7 @@ const projects = [
     shortDescription:
       "A network analysis platform that turns Reddit community activity into user-interaction graphs, bridge-like ties, and behavioral overlap metrics.",
     tech: ["Python", "Flask", "SQL", "NetworkX", "Data Pipelines", "Network Analysis"],
-    github: "",
+    github: "https://github.com/jherrera3131/Reddit-Sparse-Interaction-Graph",
     liveDemo: "",
     visualLabel: "Network Analysis",
     mainProblem:
@@ -122,6 +123,24 @@ const projects = [
       "Built a Flask-based tool to load recent posts, construct user-user interaction networks, analyze graph structure, identify bridge-like edges, and inspect user-to-subreddit portfolios.",
     result:
       "Surfaced network scale, cluster structure, bridge-like ties, central users, and overlap patterns that make online community behavior easier to study.",
+  },
+  {
+    name: "Explaining Race and Gender Wage Gaps",
+    category: "Research",
+    featured: true,
+    caseStudy: false,
+    visualType: "ols-paper",
+    paper: wageGapPaper,
+    shortDescription:
+      "An econometrics research paper using NLSY79 data and OLS regression models to analyze race and gender wage gaps across human capital, background, and labor-market factors.",
+    tech: ["Stata", "OLS Regression", "Econometrics", "NLSY79", "Hypothesis Testing"],
+    visualLabel: "Econometrics Research",
+    mainProblem:
+      "Observed wage gaps can reflect a mix of education, work experience, family background, labor-market sorting, and structural inequality, making it difficult to separate measurable explanations from persistent unexplained disparities.",
+    whatIBuilt:
+      "Built a sequence of OLS regression models using log hourly wages, race-gender indicators, schooling, age, tenure, parental education, poverty status, AFQT percentile, marital status, and industry controls.",
+    result:
+      "Found that observable human capital and background variables explain a meaningful portion of wage gaps, while some disparities remain after controls, pointing to the limits of available variables and the need to study work interruptions, employer bias, and structural labor-market factors.",
   },
   {
     name: "Online Sales Data Visualization",
