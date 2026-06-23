@@ -16,6 +16,7 @@ import todoSignup from "../assets/todo-signup.png";
 import todoDashboard from "../assets/todo-dashboard.png";
 import todoList from "../assets/todo-list.png";
 import wageGapPaper from "../assets/wage-gap-ols-nlsy79.pdf";
+import wageGapPreview from "../assets/wage-gap-paper-preview.png";
 
 export const projectFilters = [
     "All",
@@ -129,11 +130,17 @@ const projects = [
     category: "Research",
     featured: true,
     caseStudy: false,
-    visualType: "ols-paper",
+    images: [wageGapPreview],
     paper: wageGapPaper,
     shortDescription:
       "An econometrics research paper using NLSY79 data and OLS regression models to analyze race and gender wage gaps across human capital, background, and labor-market factors.",
-    tech: ["Stata", "OLS Regression", "Econometrics", "NLSY79", "Hypothesis Testing"],
+    tech: [
+      "Stata",
+      "OLS Regression",
+      "Econometrics",
+      "NLSY79",
+      "Hypothesis Testing",
+    ],
     visualLabel: "Econometrics Research",
     mainProblem:
       "Observed wage gaps can reflect a mix of education, work experience, family background, labor-market sorting, and structural inequality, making it difficult to separate measurable explanations from persistent unexplained disparities.",

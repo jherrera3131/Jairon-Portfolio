@@ -91,18 +91,30 @@ function RiskLensVisual() {
 
             <div className="space-y-2">
               <div className="flex items-center justify-between rounded-lg bg-[#71d6c9]/10 px-2 py-1">
-                <span className="text-[11px] text-[#a9a092]">Calibrated PD</span>
-                <span className="text-[11px] font-bold text-[#71d6c9]">On</span>
+                <span className="text-[11px] text-[#a9a092]">
+                  Calibrated PD
+                </span>
+                <span className="text-[11px] font-bold text-[#71d6c9]">
+                  On
+                </span>
               </div>
 
               <div className="flex items-center justify-between rounded-lg bg-[#f2b56b]/10 px-2 py-1">
-                <span className="text-[11px] text-[#a9a092]">Fairness audit</span>
-                <span className="text-[11px] font-bold text-[#f2b56b]">Queued</span>
+                <span className="text-[11px] text-[#a9a092]">
+                  Fairness audit
+                </span>
+                <span className="text-[11px] font-bold text-[#f2b56b]">
+                  Queued
+                </span>
               </div>
 
               <div className="flex items-center justify-between rounded-lg bg-[#f4efe7]/5 px-2 py-1">
-                <span className="text-[11px] text-[#a9a092]">Macro stress</span>
-                <span className="text-[11px] font-bold text-[#f4efe7]">FRED</span>
+                <span className="text-[11px] text-[#a9a092]">
+                  Macro stress
+                </span>
+                <span className="text-[11px] font-bold text-[#f4efe7]">
+                  FRED
+                </span>
               </div>
             </div>
           </div>
@@ -193,12 +205,16 @@ function InventoryKpiVisual() {
             <div className="space-y-2">
               <div className="flex items-center justify-between rounded-lg bg-[#f2b56b]/10 px-2 py-1">
                 <span className="text-[11px] text-[#a9a092]">Low stock</span>
-                <span className="text-[11px] font-bold text-[#f2b56b]">9</span>
+                <span className="text-[11px] font-bold text-[#f2b56b]">
+                  9
+                </span>
               </div>
 
               <div className="flex items-center justify-between rounded-lg bg-[#71d6c9]/10 px-2 py-1">
                 <span className="text-[11px] text-[#a9a092]">Fast movers</span>
-                <span className="text-[11px] font-bold text-[#71d6c9]">14</span>
+                <span className="text-[11px] font-bold text-[#71d6c9]">
+                  14
+                </span>
               </div>
             </div>
           </div>
@@ -209,6 +225,9 @@ function InventoryKpiVisual() {
 }
 
 export default function ProjectVisual({ project }) {
+  const hasImages = Array.isArray(project.images) && project.images.length > 0;
+  const isPaper = Boolean(project.paper);
+
   if (project.visualType === "risklens") {
     return (
       <div className="project-visual relative overflow-hidden border-b border-[#f4efe7]/10 bg-[#080a0f]">
@@ -227,34 +246,46 @@ export default function ProjectVisual({ project }) {
 
   return (
     <div className="project-visual relative overflow-hidden border-b border-[#f4efe7]/10 bg-[#080a0f]">
-      {project.images ? (
-        <div className="relative">
-          <div className="absolute left-5 top-5 z-10 rounded-full border border-[#f2b56b]/30 bg-[#080a0f]/80 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-[#f2b56b] backdrop-blur">
+      {hasImages ? (
+        <div className="relative h-64 overflow-hidden">
+          <div className="absolute left-5 top-5 z-20 rounded-full border border-[#f2b56b]/30 bg-[#080a0f]/85 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-[#f2b56b] backdrop-blur">
             {project.category}
           </div>
 
-          <img
-            src={project.images[0]}
-            alt={`${project.name} screenshot`}
-            className="h-64 w-full object-cover object-top opacity-90 transition duration-500 group-hover:scale-[1.03]"
-          />
+          {isPaper ? (
+            <div className="flex h-full items-start justify-center bg-[#f4efe7] px-6 pt-7">
+              <img
+                src={project.images[0]}
+                alt={`${project.name} paper preview`}
+                className="h-[92%] w-auto rounded-sm object-contain shadow-2xl transition duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
+          ) : (
+            <>
+              <img
+                src={project.images[0]}
+                alt={`${project.name} screenshot`}
+                className="h-64 w-full object-cover object-top opacity-90 transition duration-500 group-hover:scale-[1.03]"
+              />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#10131c] via-[#10131c]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#10131c] via-[#10131c]/10 to-transparent" />
 
-          <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-            {project.images.slice(0, 3).map((image, index) => (
-              <div
-                key={image}
-                className="h-14 flex-1 overflow-hidden rounded-xl border border-[#f4efe7]/15 bg-[#080a0f]"
-              >
-                <img
-                  src={image}
-                  alt={`${project.name} preview ${index + 1}`}
-                  className="h-full w-full object-cover object-top opacity-80"
-                />
+              <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                {project.images.slice(0, 3).map((image, index) => (
+                  <div
+                    key={image}
+                    className="h-14 flex-1 overflow-hidden rounded-xl border border-[#f4efe7]/15 bg-[#080a0f]"
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.name} preview ${index + 1}`}
+                      className="h-full w-full object-cover object-top opacity-80"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       ) : (
         <div className="relative flex h-60 items-center justify-center overflow-hidden">
