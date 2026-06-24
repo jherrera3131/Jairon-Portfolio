@@ -30,15 +30,14 @@ export const projectFilters = [
 
 const projects = [
     {
-        name: "MainStreet RiskLens",
+        name: "RiskGlass",
         category: "Dashboard",
         status: "Currently Building",
         featured: true,
         caseStudy: false,
-        caseStudyId: "mainstreet-risklens-case-study",
         visualType: "risklens",
         shortDescription:
-          "An in-progress full-stack SBA credit risk platform for predicting 36-month charge-off risk, calibrating probability of default, explaining loan-level drivers, auditing fairness risk, and stress-testing expected loss.",
+          "An in-progress full-stack AI-assisted credit risk platform for SBA loan analysis, predicting 36-month charge-off risk, calibrating probability of default, explaining loan-level drivers with SHAP, generating auditable adverse-action draft explanations, auditing fairness/proxy risk, and stress-testing expected loss.",
         tech: [
           "Python",
           "scikit-learn",
@@ -48,16 +47,17 @@ const projects = [
           "SQL",
           "FRED API",
           "LLM Pipeline",
+          "Structured JSON",
+          "AI Explainability",
         ],
         github: "",
-        liveDemo: "",
-        visualLabel: "Credit Risk Platform",
+        visualLabel: "AI Credit Risk Platform",
         mainProblem:
-          "Small-business lenders need more than a risk score. They need calibrated probabilities, transparent expected-loss views, model validation, adverse-action reason codes, and fairness/proxy-risk checks that make credit decisions easier to review.",
+          "Small-business lenders need more than a risk score. They need calibrated probabilities, transparent expected-loss views, model validation, reason-code explanations, and fairness/proxy-risk checks that make credit decisions easier to review, audit, and communicate.",
         whatIBuilt:
-          "Currently building a full-stack platform using SBA small-business loan data, time-based train/test splits, class-weighted baseline models, probability calibration, SHAP explanations, exposure toggles, fairness diagnostics, and macro stress-testing workflows.",
+          "Currently building a full-stack platform using SBA small-business loan data, a 36-month charge-off target, time-based train/test splits, class-weighted baseline models, probability calibration, SHAP-derived reason codes, structured JSON explanation objects, LLM-assisted adverse-action draft generation, exposure toggles, fairness diagnostics, and macro stress-testing workflows.",
         result:
-          "The goal is to create a portfolio-ready credit risk command center that connects machine learning, explainability, regulatory-aware adverse-action drafting, and financial risk analysis in one interactive dashboard.",
+          "The goal is to create a portfolio-ready credit risk platform that connects machine learning, AI-assisted explanation generation, model validation, regulatory-aware adverse-action drafting, fairness diagnostics, and financial risk analysis in one interactive dashboard.",
       },
   {
     name: "Travel Recommendation Research Platform",

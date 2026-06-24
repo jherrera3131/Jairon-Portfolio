@@ -7,10 +7,10 @@ function RiskLensVisual() {
         <div className="mb-4 flex items-center justify-between">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#f2b56b]">
-              MainStreet RiskLens
+              RiskGlass
             </p>
             <p className="mt-1 text-xs text-[#a9a092]">
-              PD calibration, SHAP explanations, fairness, and stress testing
+            SHAP into AI-assisted explanations, calibrated PD, fairness, and stress testing
             </p>
           </div>
 
